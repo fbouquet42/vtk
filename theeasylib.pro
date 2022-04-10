@@ -24,10 +24,12 @@ INCLUDEPATH += /usr/local/opt/vtk/include/vtk-9.1/
 SOURCES += main.cxx \
 	window.cxx \
 	toolBar.cxx \
-	renderWindow.cxx
+	renderWindow.cxx \
+	renderInteractor.cxx
 
 HEADERS  += window.h \
 	toolBar.h \
-	renderWindow.h
+	renderWindow.h \
+	renderInteractor.h
 
 FORMS    += \

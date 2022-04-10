@@ -12,6 +12,14 @@ namespace tel {
 		public:
 			Window();
 			virtual ~Window() {};
+		protected:
+#ifndef QT_NO_CONTEXTMENU
+			void contextMenuEvent(QContextMenuEvent *event) override;
+#endif // QT_NO_CONTEXTMENU
+		private:
+			QAction *cutAct;
+			QAction *copyAct;
+			QAction *pasteAct;
 	};
 
 } //el

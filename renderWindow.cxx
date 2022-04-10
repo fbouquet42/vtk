@@ -1,4 +1,5 @@
 #include "renderWindow.h"
+#include "renderInteractor.h"
 
 #include <vtkGenericOpenGLRenderWindow.h>
 #include <vtkNamedColors.h>
@@ -17,6 +18,8 @@ QSurfaceFormat::setDefaultFormat(QVTKOpenGLNativeWidget::defaultFormat());
 vtkNew<vtkGenericOpenGLRenderWindow> window;
 this->setRenderWindow(window.Get());
 
+vtkNew<RenderInteractor> interactorStyle;
+this->interactor()->SetInteractorStyle(interactorStyle);
 
 
   vtkNew<vtkNamedColors> colors;
