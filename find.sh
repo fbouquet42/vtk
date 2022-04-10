@@ -12,7 +12,6 @@ do
 			echo $file
 		fi
 	fi
-#	SEARCH=
 done
 
 
