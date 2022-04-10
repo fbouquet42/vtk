@@ -3,6 +3,8 @@
 
 #include <vtkInteractorStyleTrackballCamera.h>
 
+#include <QAction>
+
 namespace tel {
 
 	class RenderInteractor : public vtkInteractorStyleTrackballCamera
@@ -11,7 +13,15 @@ namespace tel {
 			static RenderInteractor* New();
 			vtkTypeMacro(RenderInteractor, vtkInteractorStyleTrackballCamera);
 
-		virtual void OnRightButtonDown() override;
+			RenderInteractor();
+			virtual ~RenderInteractor();
+
+			virtual void OnRightButtonDown() override;
+
+		private:
+			QAction *cutAct;
+			QAction *copyAct;
+			QAction *pasteAct;
 	};
 
 } //el
